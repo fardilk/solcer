@@ -34,6 +34,13 @@ export interface Testimonial {
   avatar?: string;
 }
 
+export const contactInfo = {
+  phone: "081908804009",
+  email: "solusicerai@gmail.com",
+  emergencyPhone: "081908804009",
+  address: "Jl. Sudirman No. 123, Jakarta Pusat, 12190",
+};
+
 export const articles: Article[] = [
   {
     id: 1,
@@ -61,7 +68,7 @@ Perceraian adalah proses yang emosional. Pertimbangkan untuk mencari dukungan da
     date: "2026-01-10",
     readTime: 5,
     featured: true,
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
+    image: "https://images.pexels.com/photos/3808517/pexels-photo-3808517.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
     id: 2,
@@ -93,7 +100,7 @@ Faktor yang Mempengaruhi Pembagian
     date: "2026-01-08",
     readTime: 7,
     featured: true,
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+    image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
     id: 3,
@@ -139,7 +146,7 @@ Kapan Memilih Litigasi:
     date: "2026-01-05",
     readTime: 8,
     featured: false,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+    image: "https://images.pexels.com/photos/3755517/pexels-photo-3755517.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
 ];
 
@@ -149,7 +156,7 @@ export const services: Service[] = [
     title: "Konsultasi Hukum Perceraian",
     slug: "konsultasi-hukum",
     description: "Konsultasi mendalam dengan pengacara berpengalaman tentang hak-hak dan opsi Anda.",
-    icon: "📋",
+    icon: "fas fa-comments",
     details: [
       "Penilaian kasus secara menyeluruh",
       "Penjelasan hak dan kewajiban Anda",
@@ -176,7 +183,7 @@ export const services: Service[] = [
     title: "Mediasi Perceraian",
     slug: "mediasi-perceraian",
     description: "Proses penyelesaian yang damai dengan bantuan mediator netral.",
-    icon: "🤝",
+    icon: "fas fa-handshake",
     details: [
       "Fasilitasi diskusi produktif",
       "Negosiasi dengan pihak lain",
@@ -205,7 +212,7 @@ export const services: Service[] = [
     title: "Litigasi Perceraian",
     slug: "litigasi-perceraian",
     description: "Representasi legal penuh di pengadilan untuk perlindungan maksimal hak-hak Anda.",
-    icon: "⚖️",
+    icon: "fas fa-gavel",
     details: [
       "Persiapan dokumen pengadilan",
       "Representasi di pengadilan",
@@ -234,7 +241,7 @@ export const services: Service[] = [
     title: "Penyelesaian Harta Gono-Gini",
     slug: "penyelesaian-aset",
     description: "Spesialisasi dalam pembagian aset yang adil dan komprehensif.",
-    icon: "💼",
+    icon: "fas fa-briefcase",
     details: [
       "Analisis finansial menyeluruh",
       "Penentuan nilai aset",
@@ -262,7 +269,7 @@ export const services: Service[] = [
     title: "Hak Asuh Anak dan Penetapan Hak Akses",
     slug: "hak-asuh-anak",
     description: "Memastikan kesejahteraan anak dengan pengaturan hak asuh yang terbaik.",
-    icon: "👨‍👩‍👧‍👦",
+    icon: "fas fa-child",
     details: [
       "Penilaian kebutuhan anak",
       "Negosiasi pengaturan hak asuh",
@@ -290,7 +297,7 @@ export const services: Service[] = [
     title: "Perlindungan dari Kekerasan Dalam Rumah Tangga",
     slug: "perlindungan-kekerasan",
     description: "Layanan khusus untuk kasus kekerasan dengan respons cepat 24/7.",
-    icon: "🛡️",
+    icon: "fas fa-shield-alt",
     details: [
       "Penilaian risiko keamanan",
       "Permohonan perlindungan darurat",
