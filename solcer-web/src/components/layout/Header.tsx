@@ -19,7 +19,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white border-b border-gray-300">
       <div className="container-wide flex justify-between items-center py-4">
         {/* Logo */}
-        <Link to="/" className="text-2xl font-bold text-solusi-blue-900">
+        <Link to="/" className="text-2xl font-bold" style={{ color: 'var(--color-primary)' }}>
           SolusIcerai
         </Link>
 
@@ -31,9 +31,12 @@ export default function Header() {
               to={link.path}
               className={`font-medium transition-colors ${
                 isActive(link.path)
-                  ? 'text-solusi-blue-900 border-b-2 border-solusi-blue-900'
-                  : 'text-gray-700 hover:text-solusi-blue-900'
+                  ? 'border-b-2'
+                  : 'text-gray-700'
               }`}
+              style={isActive(link.path) ? { color: 'var(--color-primary)', borderColor: 'var(--color-primary)' } : { color: '#374151' }}
+              onMouseEnter={(e) => !isActive(link.path) && (e.currentTarget.style.color = 'var(--color-primary)')}
+              onMouseLeave={(e) => !isActive(link.path) && (e.currentTarget.style.color = '#374151')}
             >
               {link.label}
             </Link>
@@ -81,11 +84,8 @@ export default function Header() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`font-medium py-2 ${
-                  isActive(link.path)
-                    ? 'text-solusi-blue-900'
-                    : 'text-gray-700'
-                }`}
+                className="font-medium py-2"
+                style={{ color: isActive(link.path) ? 'var(--color-primary)' : '#374151' }}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}

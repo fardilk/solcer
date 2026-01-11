@@ -4,6 +4,7 @@ import Button from '../components/common/Button';
 import Card from '../components/common/Card';
 import Container from '../components/common/Container';
 import SectionTitle from '../components/common/SectionTitle';
+import Icon from '../components/common/Icon';
 import { services } from '../constants/mockData';
 
 export default function ServicesPage() {
@@ -29,8 +30,8 @@ export default function ServicesPage() {
               className="mb-12"
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-6xl flex items-center justify-center">
-                  {service.icon}
+                <div className="flex items-center justify-center">
+                  <Icon icon={service.icon} size="xl" color="#003366" />
                 </div>
                 <div className="md:col-span-2">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -42,22 +43,22 @@ export default function ServicesPage() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                     <div>
-                      <h4 className="font-bold text-solusi-blue-900 mb-3">Apa yang Termasuk:</h4>
+                      <h4 className="font-bold text-blue-900 mb-3">Apa yang Termasuk:</h4>
                       <ul className="space-y-2">
                         {service.details.map((detail, idx) => (
                           <li key={idx} className="flex items-start gap-2 text-gray-700">
-                            <span className="text-solusi-blue-600 font-bold mt-1">✓</span>
+                            <span className="text-blue-600 font-bold mt-1">✓</span>
                             <span>{detail}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-bold text-solusi-blue-900 mb-3">Proses:</h4>
+                      <h4 className="font-bold text-blue-900 mb-3">Proses:</h4>
                       <ol className="space-y-2">
                         {service.process.map((step, idx) => (
                           <li key={idx} className="flex items-start gap-2 text-gray-700">
-                            <span className="text-solusi-blue-600 font-bold">{idx + 1}.</span>
+                            <span className="text-blue-600 font-bold">{idx + 1}.</span>
                             <span>{step}</span>
                           </li>
                         ))}
@@ -66,7 +67,7 @@ export default function ServicesPage() {
                   </div>
 
                   <div className="bg-blue-50 p-6 rounded-lg mb-8">
-                    <h4 className="font-bold text-solusi-blue-900 mb-3">Manfaat Utama:</h4>
+                    <h4 className="font-bold text-blue-900 mb-3">Manfaat Utama:</h4>
                     <ul className="space-y-2">
                       {service.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-start gap-2 text-gray-700">
@@ -80,11 +81,11 @@ export default function ServicesPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                     <div>
                       <p className="text-sm text-gray-600 font-semibold">Estimasi Biaya</p>
-                      <p className="text-lg font-bold text-solusi-blue-900">{service.cost}</p>
+                      <p className="text-lg font-bold text-blue-900">{service.cost}</p>
                     </div>
                     <div>
                       <p className="text-sm text-gray-600 font-semibold">Timeline</p>
-                      <p className="text-lg font-bold text-solusi-blue-900">{service.timeline}</p>
+                      <p className="text-lg font-bold text-blue-900">{service.timeline}</p>
                     </div>
                   </div>
 
@@ -111,7 +112,7 @@ export default function ServicesPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="bg-solusi-blue-900 text-white">
+                <tr className="bg-blue-900 text-white">
                   <th className="p-4 text-left font-bold">Fitur</th>
                   <th className="p-4 text-center font-bold">Konsultasi</th>
                   <th className="p-4 text-center font-bold">Mediasi</th>
@@ -191,7 +192,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-solusi-blue-900 text-white">
+      <section className="section-padding bg-blue-900 text-white">
         <Container as="section" className="text-center">
           <h2 className="text-4xl font-bold mb-6">
             Siap Memulai?
@@ -201,8 +202,8 @@ export default function ServicesPage() {
           </p>
           <Button
             onClick={() => navigate('/contact')}
-            className="bg-white text-solusi-blue-900 hover:bg-gray-100"
             size="lg"
+            style={{ backgroundColor: 'white', color: '#003366' }}
           >
             Hubungi Kami Sekarang
           </Button>

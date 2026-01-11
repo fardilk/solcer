@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { ReactNode, CSSProperties } from 'react';
 import { Link } from 'react-router-dom';
 
 interface ButtonProps {
@@ -10,6 +10,7 @@ interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
   className?: string;
   disabled?: boolean;
+  style?: CSSProperties;
 }
 
 export default function Button({
@@ -21,6 +22,7 @@ export default function Button({
   type = 'button',
   className = '',
   disabled = false,
+  style = {},
 }: ButtonProps) {
   const baseStyles = 'font-semibold rounded-md transition-all duration-200 inline-block text-center';
 
@@ -34,16 +36,19 @@ export default function Button({
     primary: 'btn-primary',
     secondary: 'btn-secondary',
     tertiary: 'btn-tertiary',
-    ghost: 'text-solusi-blue-600 hover:text-solusi-blue-900',
+    ghost: 'hover:underline',
   };
 
   const disabledStyles = disabled ? 'opacity-50 cursor-not-allowed' : '';
 
   const combinedClasses = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${disabledStyles} ${className}`;
 
+  const ghostStyle = variant === 'ghost' ? { color: 'var(--color-primary)' } : undefined;
+  const mergedStyle = { ...ghostStyle, ...style };
+
   if (href) {
     return (
-      <Link to={href} className={combinedClasses}>
+      <Link to={href} className={combinedClasses} style={mergedStyle}>
         {children}
       </Link>
     );
@@ -55,6 +60,7 @@ export default function Button({
       onClick={onClick}
       disabled={disabled}
       className={combinedClasses}
+      style={mergedStyle}
     >
       {children}
     </button>

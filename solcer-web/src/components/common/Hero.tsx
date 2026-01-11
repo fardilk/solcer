@@ -60,7 +60,7 @@ export default function Hero({
             {cta && (
               <button
                 onClick={cta.onClick}
-                className="btn-primary bg-white text-solusi-blue-900 hover:bg-gray-100"
+                className="btn-primary bg-white text-blue-900 hover:bg-gray-100"
               >
                 {cta.label}
               </button>

@@ -133,17 +133,17 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="section-padding bg-solusi-blue-50">
+      <section className="section-padding bg-blue-50">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <Card variant="elevated">
-              <h3 className="text-2xl font-bold text-solusi-blue-900 mb-4">Misi Kami</h3>
+              <h3 className="text-2xl font-bold text-blue-900 mb-4">Misi Kami</h3>
               <p className="text-gray-700 leading-relaxed">
                 Memberikan layanan hukum perceraian yang terjangkau, profesional, dan berorientasi pada klien, memastikan setiap individu memiliki akses ke representasi hukum berkualitas tinggi untuk melindungi hak-hak mereka.
               </p>
             </Card>
             <Card variant="elevated">
-              <h3 className="text-2xl font-bold text-solusi-blue-900 mb-4">Visi Kami</h3>
+              <h3 className="text-2xl font-bold text-blue-900 mb-4">Visi Kami</h3>
               <p className="text-gray-700 leading-relaxed">
                 Menjadi firma hukum pilihan pertama untuk perceraian dan hukum keluarga di Indonesia, dikenal karena keahlian mendalam, integritas moral, dan kepedulian autentik terhadap kesejahteraan klien kami.
               </p>
@@ -198,7 +198,7 @@ export default function AboutPage() {
       </section>
 
       {/* Statistics Section */}
-      <section className="section-padding bg-solusi-blue-900 text-white">
+      <section className="section-padding bg-blue-900 text-white">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {statistics.map((stat, index) => (
@@ -221,11 +221,11 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member) => (
               <Card key={member.id} variant="elevated">
-                <div className="w-full h-48 bg-solusi-blue-50 rounded-lg mb-4"></div>
+                <div className="w-full h-48 bg-blue-50 rounded-lg mb-4"></div>
                 <h3 className="text-xl font-bold text-gray-900 mb-1">
                   {member.name}
                 </h3>
-                <p className="text-solusi-blue-600 font-semibold text-sm mb-2">
+                <p className="text-blue-600 font-semibold text-sm mb-2">
                   {member.role}
                 </p>
                 <p className="text-sm text-gray-600 mb-3 font-medium">
@@ -269,7 +269,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-solusi-blue-900 text-white">
+      <section className="section-padding bg-blue-900 text-white">
         <Container as="section" className="text-center">
           <h2 className="text-4xl font-bold mb-6">
             Siap Bekerja Sama?
@@ -279,7 +279,7 @@ export default function AboutPage() {
           </p>
           <Button
             onClick={() => navigate('/contact')}
-            className="bg-white text-solusi-blue-900 hover:bg-gray-100"
+            className="bg-white text-blue-900 hover:bg-gray-100"
             size="lg"
           >
             Hubungi Kami Sekarang

@@ -4,6 +4,7 @@ import Button from '../components/common/Button';
 import Card from '../components/common/Card';
 import Container from '../components/common/Container';
 import SectionTitle from '../components/common/SectionTitle';
+import Icon from '../components/common/Icon';
 import { services, testimonials, articles, caseStudies } from '../constants/mockData';
 
 export default function HomePage() {
@@ -38,7 +39,7 @@ export default function HomePage() {
                 Pelajari Lebih Lanjut
               </Button>
             </div>
-            <div className="bg-solusi-blue-50 rounded-lg h-96"></div>
+            <div className="bg-blue-50 rounded-lg h-96"></div>
           </div>
         </Container>
       </section>
@@ -52,12 +53,14 @@ export default function HomePage() {
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.slice(0, 6).map((service) => (
-              <Card key={service.id} variant="elevated">
-                <div className="text-4xl mb-4">{service.icon}</div>
+              <Card key={service.id} variant="elevated" className="flex flex-col">
+                <div className="mb-4">
+                  <Icon icon={service.icon} size="xl" color="#003366" />
+                </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                   {service.description}
                 </p>
                 <Button
@@ -115,21 +118,21 @@ export default function HomePage() {
                   <h3 className="text-xl font-bold text-gray-900">
                     {caseStudy.title}
                   </h3>
-                  <span className="bg-solusi-blue-900 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-blue-900 text-white px-3 py-1 rounded-full text-sm font-semibold">
                     Kasus {index + 1}
                   </span>
                 </div>
                 <div className="space-y-4">
                   <div>
-                    <p className="text-sm font-semibold text-solusi-blue-900">Situasi:</p>
+                    <p className="text-sm font-semibold text-blue-900">Situasi:</p>
                     <p className="text-gray-700">{caseStudy.situation}</p>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-solusi-blue-900">Pendekatan:</p>
+                    <p className="text-sm font-semibold text-blue-900">Pendekatan:</p>
                     <p className="text-gray-700">{caseStudy.approach}</p>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-solusi-blue-900">Hasil:</p>
+                    <p className="text-sm font-semibold text-blue-900">Hasil:</p>
                     <p className="text-gray-700">{caseStudy.result}</p>
                   </div>
                   <div className="flex justify-between text-sm text-gray-600 pt-4 border-t">
@@ -163,7 +166,7 @@ export default function HomePage() {
                   alt={article.title}
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
-                <span className="inline-block px-3 py-1 bg-blue-100 text-solusi-blue-900 text-sm font-semibold rounded-full mb-3">
+                <span className="inline-block px-3 py-1 bg-blue-100 text-blue-900 text-sm font-semibold rounded-full mb-3">
                   {article.category}
                 </span>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -188,7 +191,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-solusi-blue-900 text-white">
+      <section className="section-padding bg-blue-900 text-white">
         <Container as="section" className="text-center">
           <h2 className="text-4xl font-bold mb-6">
             Siap Memulai?
@@ -199,8 +202,9 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               onClick={() => navigate('/contact')}
-              className="bg-white text-solusi-blue-900 hover:bg-gray-100"
+              className="text-white"
               size="lg"
+              style={{ backgroundColor: 'white', color: '#003366' }}
             >
               Hubungi Kami Sekarang
             </Button>
@@ -208,7 +212,8 @@ export default function HomePage() {
               onClick={() => navigate('/services')}
               variant="tertiary"
               size="lg"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:bg-opacity-10"
+              className="border-2 border-white text-white"
+              style={{ backgroundColor: 'transparent' }}
             >
               Pelajari Layanan Kami
             </Button>

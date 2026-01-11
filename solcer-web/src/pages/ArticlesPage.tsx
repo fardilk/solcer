@@ -40,7 +40,7 @@ export default function ArticlesPage() {
           />
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           <Container className="absolute bottom-0 left-0 right-0 flex flex-col justify-end h-full pb-8">
-            <span className="inline-block w-fit px-3 py-1 bg-white text-solusi-blue-900 text-sm font-semibold rounded-full mb-4">
+            <span className="inline-block w-fit px-3 py-1 bg-white text-blue-900 text-sm font-semibold rounded-full mb-4">
               {article.category}
             </span>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -139,7 +139,7 @@ export default function ArticlesPage() {
               </div>
 
               {/* CTA */}
-              <div className="mt-16 bg-solusi-blue-50 p-8 rounded-lg text-center">
+              <div className="mt-16 bg-blue-50 p-8 rounded-lg text-center">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Butuh Konsultasi Hukum?
                 </h3>
@@ -235,7 +235,7 @@ export default function ArticlesPage() {
                       FEATURED
                     </span>
                   )}
-                  <span className="inline-block px-3 py-1 bg-blue-100 text-solusi-blue-900 text-sm font-semibold rounded-full mb-3">
+                  <span className="inline-block px-3 py-1 bg-blue-100 text-blue-900 text-sm font-semibold rounded-full mb-3">
                     {article.category}
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -272,7 +272,7 @@ export default function ArticlesPage() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="section-padding bg-solusi-blue-900 text-white">
+      <section className="section-padding bg-blue-900 text-white">
         <Container as="section" className="text-center">
           <h2 className="text-3xl font-bold mb-4">
             Tetap Terinformasi
@@ -288,7 +288,7 @@ export default function ArticlesPage() {
             />
             <Button
               variant="primary"
-              className="bg-white text-solusi-blue-900 hover:bg-gray-100"
+              className="bg-white text-blue-900 hover:bg-gray-100"
             >
               Berlangganan
             </Button>

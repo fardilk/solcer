@@ -4,6 +4,7 @@ import Button from '../components/common/Button';
 import Card from '../components/common/Card';
 import Container from '../components/common/Container';
 import SectionTitle from '../components/common/SectionTitle';
+import { contactInfo } from '../constants/mockData';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -62,8 +63,8 @@ export default function ContactPage() {
             <Card>
               <div className="text-4xl mb-4">📞</div>
               <h3 className="font-bold text-gray-900 mb-2">Telepon</h3>
-              <a href="tel:+622112345678" className="text-solusi-blue-600 hover:text-solusi-blue-900 font-semibold">
-                +62 21 1234 5678
+              <a href={`tel:${contactInfo.phone}`} className="font-semibold" style={{ color: 'var(--color-primary-light)' }}>
+                {contactInfo.phone}
               </a>
               <p className="text-sm text-gray-600 mt-2">Senin-Jumat 9:00-17:00</p>
             </Card>
@@ -71,8 +72,8 @@ export default function ContactPage() {
             <Card>
               <div className="text-4xl mb-4">📧</div>
               <h3 className="font-bold text-gray-900 mb-2">Email</h3>
-              <a href="mailto:info@solusicerai.com" className="text-solusi-blue-600 hover:text-solusi-blue-900 font-semibold break-all">
-                info@solusicerai.com
+              <a href={`mailto:${contactInfo.email}`} className="font-semibold break-all" style={{ color: 'var(--color-primary-light)' }}>
+                {contactInfo.email}
               </a>
               <p className="text-sm text-gray-600 mt-2">Respon dalam 24 jam</p>
             </Card>
@@ -81,16 +82,15 @@ export default function ContactPage() {
               <div className="text-4xl mb-4">📍</div>
               <h3 className="font-bold text-gray-900 mb-2">Kantor Jakarta</h3>
               <p className="text-gray-700 text-sm">
-                Jl. Sudirman No. 123<br/>
-                Jakarta Pusat, 12190
+                {contactInfo.address}
               </p>
             </Card>
 
             <Card className="bg-red-50 border-red-200">
               <div className="text-4xl mb-4">🚨</div>
               <h3 className="font-bold text-red-900 mb-2">Darurat 24/7</h3>
-              <a href="tel:+622187654321" className="text-red-600 hover:text-red-900 font-semibold">
-                +62 21 8765 4321
+              <a href={`tel:${contactInfo.emergencyPhone}`} className="text-red-600 font-semibold">
+                {contactInfo.emergencyPhone}
               </a>
               <p className="text-sm text-red-700 mt-2">Respons cepat</p>
             </Card>
@@ -133,7 +133,7 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-solusi-blue-600"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-2 focus:ring-blue-400"
                       placeholder="Masukkan nama Anda"
                     />
                   </div>
@@ -149,7 +149,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-solusi-blue-600"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-2 focus:ring-blue-400"
                         placeholder="email@example.com"
                       />
                     </div>
@@ -163,7 +163,7 @@ export default function ContactPage() {
                         value={formData.phone}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-solusi-blue-600"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-2 focus:ring-blue-400"
                         placeholder="+62 21 XXXX XXXX"
                       />
                     </div>
@@ -177,7 +177,7 @@ export default function ContactPage() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-solusi-blue-600"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-2 focus:ring-blue-400"
                     >
                       <option>Konsultasi Awal</option>
                       <option>Perceraian Tanpa Perselisihan</option>
@@ -199,7 +199,7 @@ export default function ContactPage() {
                         name="caseType"
                         value={formData.caseType}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-solusi-blue-600"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-2 focus:ring-blue-400"
                       >
                         <option>Sederhana</option>
                         <option>Sedang</option>
@@ -230,7 +230,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-solusi-blue-600"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-2 focus:ring-blue-400"
                       placeholder="Jelaskan situasi Anda dan pertanyaan yang Anda miliki..."
                     ></textarea>
                   </div>
@@ -281,12 +281,12 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold text-gray-900">Kontak</p>
                     <p className="text-gray-700">
-                      <a href="tel:+622112345678" className="text-solusi-blue-600 hover:text-solusi-blue-900">
-                        +62 21 1234 5678
+                      <a href={`tel:${contactInfo.phone}`} className="text-blue-600 hover:text-blue-900">
+                        {contactInfo.phone}
                       </a>
                       <br/>
-                      <a href="mailto:info@solusicerai.com" className="text-solusi-blue-600 hover:text-solusi-blue-900">
-                        info@solusicerai.com
+                      <a href={`mailto:${contactInfo.email}`} className="text-blue-600 hover:text-blue-900">
+                        {contactInfo.email}
                       </a>
                     </p>
                   </div>
@@ -303,10 +303,10 @@ export default function ContactPage() {
                   Jika Anda menghadapi situasi darurat atau memerlukan bantuan segera, hubungi nomor darurat kami:
                 </p>
                 <a
-                  href="tel:+622187654321"
+                  href={`tel:${contactInfo.emergencyPhone}`}
                   className="inline-block px-6 py-3 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition"
                 >
-                  📞 +62 21 8765 4321
+                  📞 {contactInfo.emergencyPhone}
                 </a>
                 <p className="text-sm text-red-700 mt-4">
                   Tersedia 24 jam sehari, 7 hari seminggu untuk kasus mendesak

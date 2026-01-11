@@ -38,8 +38,8 @@ The Contact Us page is a critical conversion point where interested visitors can
 - **Phone Number**: Primary and secondary (if applicable)
   - Format: Clear, clickable on mobile
   - Available hours: Display hours of operation
-  - Example: "+62 21 XXXX XXXX" (Jakarta office)
-
+  - Example: "081908804009" (Jakarta office)
+ 
 - **Email Address**:
   - General inquiries: info@solusicerai.com
   - Emergency cases: emergency@solusicerai.com (24/7)
