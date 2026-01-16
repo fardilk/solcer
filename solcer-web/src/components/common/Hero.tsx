@@ -49,7 +49,7 @@ export default function Hero({
                 {subtitle}
               </p>
             )}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl text-blue-100 md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               {title}
             </h1>
             {description && (

@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
           {/* Column 1: Company */}
           <div>
-            <h3 className="text-xl font-bold mb-4">SolusIcerai</h3>
+            <h3 className="text-blue-100 text-xl font-bold mb-4">SolusIcerai</h3>
             <p className="text-sm leading-relaxed mb-4" style={{ color: '#e8f4f8' }}>
               Firma hukum terkemuka dalam layanan perceraian dan hukum keluarga di Indonesia.
             </p>
@@ -39,7 +39,7 @@ export default function Footer() {
 
           {/* Column 2: Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Menu Cepat</h4>
+            <h4 className="font-semibold mb-4 text-blue-100">Menu Cepat</h4>
             <ul className="space-y-2 text-sm">
               <li><Link to="/" className="transition hover:text-white" style={{ color: '#e8f4f8' }}>Beranda</Link></li>
               <li><Link to="/about" className="transition hover:text-white" style={{ color: '#e8f4f8' }}>Tentang Kami</Link></li>
@@ -50,7 +50,7 @@ export default function Footer() {
 
           {/* Column 3: Services */}
           <div>
-            <h4 className="font-semibold mb-4">Layanan Kami</h4>
+            <h4 className="font-semibold mb-4 text-blue-100">Layanan Kami</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="#" className="transition hover:text-white" style={{ color: '#e8f4f8' }}>Konsultasi Hukum</a></li>
               <li><a href="#" className="transition hover:text-white" style={{ color: '#e8f4f8' }}>Mediasi</a></li>
@@ -61,13 +61,14 @@ export default function Footer() {
 
           {/* Column 4: Contact */}
           <div>
-            <h4 className="font-semibold mb-4">Hubungi Kami</h4>
-            <ul className="space-y-2 text-sm">
+            <h4 className="font-semibold mb-4 text-blue-100">Hubungi Kami</h4>
+            <ul className="space-y-2 text-sm ">
               <li style={{ color: '#e8f4f8' }}>
                 <a href={`tel:${contactInfo.phone}`} className="hover:text-white transition">{contactInfo.phone}</a>
               </li>
               <li style={{ color: '#e8f4f8' }}>
-                <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition">{contactInfo.email}</a>
+                <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition"
+                >{contactInfo.email}</a>
               </li>
               <li style={{ color: '#e8f4f8' }}>
                 {contactInfo.address}
@@ -81,7 +82,7 @@ export default function Footer() {
 
           {/* Column 5: Legal */}
           <div>
-            <h4 className="font-semibold mb-4">Legal</h4>
+            <h4 className="font-semibold mb-4 text-blue-100">Legal</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="#" className="transition hover:text-white" style={{ color: '#e8f4f8' }}>Kebijakan Privasi</a></li>
               <li><a href="#" className="transition hover:text-white" style={{ color: '#e8f4f8' }}>Syarat & Ketentuan</a></li>

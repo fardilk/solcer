@@ -193,7 +193,7 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="section-padding bg-blue-900 text-white">
         <Container as="section" className="text-center">
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className="text-4xl font-bold mb-6 text-blue-100">
             Siap Memulai?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
