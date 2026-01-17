@@ -1,45 +1,24 @@
-# Dependencies
-node_modules/
+# Logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-package-lock.json
-yarn.lock
 
-# Build outputs
-dist/
-dist-ssr/
-build/
-.next/
-out/
+node_modules
+dist
+dist-ssr
+*.local
 
-# Development
-.DS_Store
-.env
-.env.local
-.env.*.local
-*.swp
-*.swo
-*~
-
-# IDE
-.vscode/
+# Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea/
-*.sublime-project
-*.sublime-workspace
+.idea
+.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
-
-# OS
-Thumbs.db
-
-# Project specific
-.claude/
 *.sw?
-*.local
