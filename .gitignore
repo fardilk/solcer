@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Claude Code settings
+.claude/
+
+# Environment variables
+.env
+.env.local
