@@ -1,8 +1,8 @@
 FROM node:18-alpine AS builder
 WORKDIR /app
-COPY package*.json ./
+COPY solcer-web/package*.json ./
 RUN npm install
-COPY . .
+COPY solcer-web/ .
 RUN npm run build
 
 FROM nginx:alpine
