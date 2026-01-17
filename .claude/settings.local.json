@@ -21,7 +21,9 @@
       "Bash(ssh-keygen:*)",
       "Bash(ssh:*)",
       "Bash(git pull:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(git reset:*)",
+      "Bash(git ls-tree:*)"
     ]
   }
 }
