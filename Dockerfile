@@ -13,4 +13,4 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80 443
 
-CMD ["sh", "-c", "certbot certonly --standalone -d solusicera.com --email your-email@example.com --agree-tos --non-interactive || true && nginx -g 'daemon off;'"]
+CMD ["sh", "-c", "certbot certonly --standalone -d solusicerai.com --email fardil.khalidi@gmail.com --agree-tos --non-interactive || true && nginx -g 'daemon off;'"]
